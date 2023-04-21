@@ -511,5 +511,12 @@ a {
   .pie-chart-img {
     margin-left: 1.7rem;
   }
+  .status-xx p {
+    padding-top: 12px !important;
+    font-size: 12px;
+  }
+  .status-xx img {
+    width: 25%;
+  }
 }
 /* Responsiveness ENds */
