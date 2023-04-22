@@ -278,7 +278,18 @@ a {
   .col-md-7 {
     width: 100%;
   }
-
+  .table-x {
+    overflow-x: scroll;
+  }
+  .scrollbar-container {
+    position: relative;
+    height: 100%;
+  }
+  .ps {
+    overflow: hidden !important;
+    overflow-anchor: none;
+    touch-action: auto;
+  }
   .shadow-text-ii svg {
     margin-bottom: 0.1rem !important;
   }
@@ -342,7 +353,7 @@ a {
     height: 12vh;
   }
   .sub-head {
-    gap: 95px;
+    gap: 85px;
   }
   .ad-admin-iii {
     margin-bottom: 1.5rem;
@@ -363,7 +374,7 @@ a {
   }
   .sidebar-menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 25%;
@@ -424,12 +435,12 @@ a {
     border-radius: 0.25rem !important;
   }
   .ad-admin-ii th {
-    padding: 9px 2px;
+    padding: 9px 7px;
   }
   .ad-admin-ii td {
     font-size: 11px !important;
     font-weight: 400 !important;
-    padding: 0.6rem 5px;
+    padding: 0.6rem 10px;
   }
   .table-x .gap-10 {
     gap: 5px !important;
@@ -456,8 +467,8 @@ a {
   .b-svg {
     margin-bottom: 1rem;
   }
-  .sub-head {
-    gap: 30px;
+  .status-xx {
+    overflow-x: scroll;
   }
   .status-xx p {
     padding-top: 10px !important;
@@ -491,32 +502,21 @@ a {
   .sidebar-menu {
     width: 45%;
   }
-}
-@media screen and (max-width: 375px) {
-  td button {
-    padding: 4px 10px !important;
-  }
-  .ad-admin-ii th {
-    padding: 9px 1px;
-  }
-  .ad-admin-ii td {
-    padding: 0.6rem 4px;
-  }
-  .ad-admin-ii {
-    padding: 20px 5px !important;
+  .ova {
+    overflow-x: hidden;
   }
   .sub-head {
-    gap: 23px;
-  }
-  .pie-chart-img {
-    margin-left: 1.7rem;
-  }
-  .status-xx p {
-    padding-top: 12px !important;
-    font-size: 12px;
-  }
-  .status-xx img {
-    width: 25%;
+    gap: 34px;
   }
 }
+@media screen and (max-width: 375px) {
+  .logout {
+    position: relative;
+    top: 100px;
+  }
+  .menu-button {
+    margin-top: 0.6rem;
+  }
+}
+
 /* Responsiveness ENds */

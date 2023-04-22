@@ -106,7 +106,7 @@ const Admin = () => {
             </div>
           </div>
           <div className="table-x">
-            <table style={{ width: "100%" }}>
+            <table className="scrollbar-container ps" style={{ width: "100%" }}>
               <tr>
                 <th>No.</th>
                 <th>Car no.</th>
@@ -388,7 +388,7 @@ const Admin = () => {
               <p>$100k</p>
               <p>$0.00</p>
             </div>
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column ova">
               <div
                 style={{
                   backgroundImage: 'url("images/graph.svg")',
