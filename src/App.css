@@ -506,13 +506,20 @@ a {
     overflow-x: hidden;
   }
   .sub-head {
-    gap: 34px;
+    gap: 28px;
+  }
+  .filt svg {
+    display: block !important;
+    margin-top: 0.9rem;
+  }
+  .filter-img {
+    display: none !important;
   }
 }
 @media screen and (max-width: 375px) {
   .logout {
     position: relative;
-    top: 100px;
+    top: 55px;
   }
   .menu-button {
     margin-top: 0.6rem;

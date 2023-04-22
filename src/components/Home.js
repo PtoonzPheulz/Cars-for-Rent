@@ -6,7 +6,7 @@ import Admin from "../pages/Admin";
 const Home = () => {
   return (
     <>
-      <div className="container">
+      <div className="container-xxl">
         <div className="row revs">
           <div className="col-md-2">
             <Dashboard />

@@ -1,7 +1,7 @@
 import React from "react";
 import { FaBell } from "react-icons/fa";
 import { FiSearch, FiClock } from "react-icons/fi";
-import { BsCalendarCheck } from "react-icons/bs";
+import { BsCalendarCheck, BsFilterSquare } from "react-icons/bs";
 import { BiCar } from "react-icons/bi";
 
 const Admin = () => {
@@ -100,8 +100,9 @@ const Admin = () => {
         >
           <div className="d-flex justify-content-between status-xx">
             <h5 style={{ padding: ".5rem 0" }}>Live Car Status</h5>
-            <div className="d-flex gap-5">
-              <img src="images/filter.svg" alt="" />
+            <div className="d-flex gap-5 filt">
+              <img className="filter-img" src="images/filter.svg" alt="" />
+              <BsFilterSquare className="d-none" />
               <p style={{ marginBottom: "0", paddingTop: "8px" }}>Filter</p>
             </div>
           </div>
