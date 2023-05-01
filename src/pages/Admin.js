@@ -1,8 +1,47 @@
 import React from "react";
 import { FaBell } from "react-icons/fa";
 import { FiSearch, FiClock } from "react-icons/fi";
-import { BsCalendarCheck, BsFilterSquare } from "react-icons/bs";
+import { BsCalendarCheck, BsChevronDown, BsFilterSquare } from "react-icons/bs";
 import { BiCar } from "react-icons/bi";
+import Select, { components } from "react-select";
+
+// const Option = (props) => (
+//   <components.Option {...props}>
+//     {props.data.icon}
+//     {props.label}
+//   </components.Option>
+// );
+const customStyles = {
+  control: (provided) => ({
+    ...provided,
+    // paddingLeft: "30px",
+  }),
+};
+const DropdownIndicator = (props) => {
+  return (
+    <components.DropdownIndicator {...props}>
+      <BsChevronDown />
+    </components.DropdownIndicator>
+  );
+};
+const Placeholder = (props) => {
+  return (
+    <components.Placeholder {...props}>
+      {props.data.icon}
+      {props.children}
+    </components.Placeholder>
+  );
+};
+
+const option = [
+  { value: "Car Number", label: "Car Number" },
+  { value: "Nov 20", label: "Nov 20" },
+  { value: "10:20 AM", label: "10:20 AM" },
+];
+
+const icon2 = <BsCalendarCheck style={{ marginRight: "10px" }} />;
+const icon3 = <FiClock style={{ marginRight: "10px" }} />;
+const icon1 = <BiCar style={{ marginRight: "10px" }} />;
 
 const Admin = () => {
   return (
@@ -40,7 +79,35 @@ const Admin = () => {
         >
           <h5 className="py-2">Car Availability</h5>
           <div className="d-flex justify-content-between find-data">
-            <div className="form-floating">
+            <Select
+              options={option}
+              components={{ Placeholder, DropdownIndicator }}
+              styles={customStyles}
+              placeholder={{
+                label: "Car Number",
+                icon: icon1,
+              }}
+            />
+            <Select
+              options={option}
+              components={{ Placeholder, DropdownIndicator }}
+              styles={customStyles}
+              placeholder={{
+                label: "Nov 20",
+                icon: icon2,
+              }}
+            />
+            <Select
+              options={option}
+              components={{ Placeholder, DropdownIndicator }}
+              styles={customStyles}
+              placeholder={{
+                label: "10:20 AM",
+                icon: icon3,
+              }}
+            />
+
+            {/* <div className="form-floating">
               <div
                 style={{ paddingRight: "40px" }}
                 className="form-select car-id d-flex gap-5"
@@ -91,7 +158,7 @@ const Admin = () => {
             </div>
             <div className="check-btn">
               <button>Check</button>
-            </div>
+            </div> */}
           </div>
         </div>
         <div

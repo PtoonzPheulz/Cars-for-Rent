@@ -25,7 +25,7 @@ const Dashboard = () => {
       >
         <BiMenu />
       </button>
-      <div className="contain"></div>
+      <div className=""></div>
       <div
         style={{ height: "128vh" }}
         className={`d-flex flex-column align-items-center bg-dark sidebar-menu ${

@@ -38,6 +38,14 @@ a {
   gap: 97px;
 }
 
+.wrapper-i {
+  overflow: hidden;
+}
+.sidebar-menu {
+  position: fixed;
+
+  z-index: 15;
+}
 /* Dashboard Pages  */
 .menu-wrapper h4 {
   color: #fff;
