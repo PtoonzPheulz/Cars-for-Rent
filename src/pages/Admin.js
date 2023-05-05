@@ -35,17 +35,36 @@ const Placeholder = (props) => {
   );
 };
 
-// fixes and know what the icon should not be before the initialization 
+// fixes and know what the icon should not be before the initialization
 const option = [
-  { value: "Car Number", label: <span className="d-flex gap-2 align-items-center">Car Number <span></span>{icon2}</span> },
-  { value: "Nov 20", label: "Nov 20" },
-  { value: "10:20 AM", label: "10:20 AM" },
-  
+  {
+    value: "Car Number",
+    label: (
+      <span className="d-flex gap-2 align-items-center">
+        {icon2}
+        Car Number <span></span>
+      </span>
+    ),
+  },
+  {
+    value: "Nov 20",
+    label: (
+      <span className="d-flex gap-2 align-items-center">
+        {icon1}
+        Nov 20 <span></span>
+      </span>
+    ),
+  },
+  {
+    value: "10:20 AM",
+    label: (
+      <span className="d-flex gap-2 align-items-center">
+        {icon3}
+        10:20 AM <span></span>
+      </span>
+    ),
+  },
 ];
-
-
-
-
 
 const Admin = () => {
   return (
@@ -96,6 +115,8 @@ const Admin = () => {
             />
             <Select
               options={option}
+              //i make the first one the default value
+              value={option[1]}
               // components={{ Placeholder, DropdownIndicator }}
               styles={customStyles}
               // placeholder={{
@@ -105,6 +126,8 @@ const Admin = () => {
             />
             <Select
               options={option}
+              //i make the first one the default value
+              value={option[2]}
               // components={{ Placeholder, DropdownIndicator }}
               styles={customStyles}
               // placeholder={{
